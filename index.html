@@ -6,7 +6,7 @@
 <!-- three.js load GLTF -->
 <script src='src/GLTFLoader.js'></script>
 <!-- ar.js -->
-<script src='../build/ar-threex.js'></script>
+<script src='src/ar-threex.js'></script>
 
 <script>THREEx.ArToolkitContext.baseURL = '../'</script>
 
@@ -171,7 +171,7 @@
         var threeGLTFLoader = new THREE.GLTFLoader();
         var model;
 
-        threeGLTFLoader.load("./data/scene.gltf", function (gltf) {
+        threeGLTFLoader.load("/data/scene.gltf", function (gltf) {
             model = gltf.scene.children[0];
             model.name = 'Flamingo';
 
