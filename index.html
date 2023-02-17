@@ -1,4 +1,4 @@
-<!--v0.2.0-->
+<!--v0.2.1-->
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
@@ -26,7 +26,7 @@
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
-    <div>--v0.2.0--</div>
+    <div>--v0.2.1--</div>
   </div>
   <a-scene
     vr-mode-ui="enabled: false;"
@@ -52,5 +52,8 @@
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
-  <script>document.querySelector('a-scene').sceneEl.camera = new THREE.PerspectiveCamera();</script>
+  <script>
+    document.querySelector('a-scene').sceneEl.camera.near = .1;
+    document.querySelector('a-scene').sceneEl.camera.far = 10000;
+</script>
 </body>
